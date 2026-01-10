@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Performance | HRMS-MCD</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="header">
+    <h2>Performance Track</h2>
+</header>
+
+<nav class="nav">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="recruitment.html">Recruitment</a>
+    <a href="attendance.html">Attendance</a>
+    <a href="transfers.html">Transfers</a>
+    <a href="payroll.html">Payroll</a>
+    <a href="performance.html">Performance</a>
+    <a href="grievance.html">Grievance</a>
+</nav>
+
+<div class="container">
+    <h3>Performance Metrics</h3>
+    <table class="card">
+        <tr><th>Month</th><th>Rating</th></tr>
+        <tbody id="performanceTable"></tbody>
+    </table>
+</div>
+
+<script src="../js/employee.js"></script>
+<script>
+const perfTable = document.getElementById("performanceTable");
+employee.performance.forEach(p=>{
+    const row = document.createElement("tr");
+    row.innerHTML = `<td>${p.month}</td><td>${p.rating}</td>`;
+    perfTable.appendChild(row);
+});
+</script>
+</body>
+</html>

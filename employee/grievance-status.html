@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grievance Status | HRMS-MCD</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="header">
+    <h2>Grievance Status</h2>
+</header>
+
+<nav class="nav">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="recruitment.html">Recruitment</a>
+    <a href="attendance.html">Attendance</a>
+    <a href="transfers.html">Transfers</a>
+    <a href="payroll.html">Payroll</a>
+    <a href="performance.html">Performance</a>
+    <a href="grievance.html">Grievance</a>
+</nav>
+
+<div class="container">
+    <h3>Your Grievances</h3>
+    <div id="grievanceList"></div>
+</div>
+
+<script src="../js/employee.js"></script>
+<script>
+const listDiv = document.getElementById("grievanceList");
+if(employee.grievances.length === 0){
+    listDiv.innerHTML = "<p>No grievances submitted yet.</p>";
+} else {
+    employee.grievances.forEach(g=>{
+        const card = document.createElement("div");
+        card.className="card";
+        card.innerHTML=`<b>${g.title}</b><br>${g.desc}<br>Status: <span class="status">${g.status}</span>`;
+        listDiv.appendChild(card);
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance | HRMS-MCD</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="header">
+    <h2>Attendance</h2>
+</header>
+
+<nav class="nav">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="recruitment.html">Recruitment</a>
+    <a href="attendance.html">Attendance</a>
+    <a href="transfers.html">Transfers</a>
+    <a href="payroll.html">Payroll</a>
+    <a href="performance.html">Performance</a>
+    <a href="grievance.html">Grievance</a>
+</nav>
+
+<div class="container">
+    <h3>Attendance Records</h3>
+    <table class="card">
+        <tr><th>Date</th><th>Status</th></tr>
+        <tbody id="attendanceTable"></tbody>
+    </table>
+</div>
+
+<script src="../js/employee.js"></script>
+<script>
+const attTable = document.getElementById("attendanceTable");
+employee.attendance.forEach(a=>{
+    const row = document.createElement("tr");
+    row.innerHTML = `<td>${a.date}</td><td>${a.status}</td>`;
+    attTable.appendChild(row);
+});
+</script>
+</body>
+</html>

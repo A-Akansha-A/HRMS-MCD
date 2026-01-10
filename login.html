@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login | HRMS-MCD</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2>Login</h2>
+
+<form onsubmit="loginUser(event)">
+    <label>Username:</label><br>
+    <input type="text" id="username" required><br><br>
+
+    <label>Role:</label><br>
+    <select id="role" required>
+        <option value="">Select Role</option>
+        <option value="employee">Employee</option>
+        <option value="admin">Admin</option>
+    </select><br><br>
+
+    <button type="submit">Login</button>
+</form>
+
+<script>
+function loginUser(e){
+    e.preventDefault();
+    var role = document.getElementById("role").value;
+
+    if(role === "employee"){
+        window.location.href = "employee/dashboard.html";
+    } else if(role === "admin"){
+        alert("Admin dashboard will be added by admin teammate");
+    } else {
+        alert("Please select role");
+    }
+}
+</script>
+
+</body>
+</html>

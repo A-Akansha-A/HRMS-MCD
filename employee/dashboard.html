@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Dashboard | HRMS-MCD</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <h2>Unified HRMS - MCD</h2>
+    <p>Employee Dashboard</p>
+</header>
+
+<nav class="nav">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="recruitment.html">Recruitment</a>
+    <a href="attendance.html">Attendance</a>
+    <a href="transfers.html">Transfers</a>
+    <a href="payroll.html">Payroll</a>
+    <a href="performance.html">Performance</a>
+    <a href="grievance.html">Grievance</a>
+</nav>
+
+<div class="container">
+    <h3>Welcome, <span id="empName">Employee</span></h3>
+
+    <div class="card">
+        <h4>Profile Summary</h4>
+        <p><b>Name:</b> <span id="profileName">-</span></p>
+        <p><b>Department:</b> <span id="profileDept">-</span></p>
+        <p><b>Designation:</b> <span id="profileDesig">-</span></p>
+    </div>
+
+    <h4>Quick Actions</h4>
+    <div class="card-container">
+        <div class="card action" id="viewProfile">
+            <h4>View Profile</h4>
+        </div>
+
+        <div class="card action" id="submitGrievance">
+            <h4>Submit Grievance</h4>
+        </div>
+
+        <div class="card action" id="grievanceStatus">
+            <h4>Grievance Status</h4>
+        </div>
+    </div>
+</div>
+
+<script src="../js/employee.js"></script>
+</body>
+</html>
+
