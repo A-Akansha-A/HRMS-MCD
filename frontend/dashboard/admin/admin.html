@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MCD HRMS | Admin Dashboard</title>
+
+<!-- FONT AWESOME ICONS -->
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<!-- CHART JS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <h2>MCD HRMS</h2>
+  <p class="subtitle">Municipal Corporation of Delhi</p>
+
+  <nav>
+    <a class="active"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+    <a><i class="fa-solid fa-users"></i> Recruitment</a>
+    <a><i class="fa-solid fa-calendar-check"></i> Attendance</a>
+    <a><i class="fa-solid fa-briefcase"></i> Transfers</a>
+    <a><i class="fa-solid fa-money-bill"></i> Payroll</a>
+    <a><i class="fa-solid fa-star"></i> Performance</a>
+    <a><i class="fa-solid fa-comments"></i> Grievances</a>
+  </nav>
+
+  <div class="version">Version 1.0<br>© 2026 MCD</div>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <div>
+    <h3>Dashboard</h3>
+    <small>Municipal Corporation of Delhi - HRMS Portal</small>
+  </div>
+
+  <div class="top-right">
+    <div class="notify">
+      <i class="fa-solid fa-bell"></i>
+      <span>7</span>
+    </div>
+
+    <select class="role">
+      <option>Administrator</option>
+      <option>HR</option>
+      <option>Employee</option>
+    </select>
+  </div>
+</header>
+
+<!-- WELCOME -->
+<section class="welcome">
+  <h2>Welcome to MCD HRMS Dashboard</h2>
+  <p>Manage all HR operations across Municipal Corporation of Delhi</p>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="card">
+    <i class="fa-solid fa-users"></i>
+    <div>
+      <span>Total Employees</span>
+      <h1>1317</h1>
+    </div>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-building"></i>
+    <div>
+      <span>Open Vacancies</span>
+      <h1>60</h1>
+    </div>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-clock"></i>
+    <div>
+      <span>Pending Approvals</span>
+      <h1>1</h1>
+    </div>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-circle-exclamation"></i>
+    <div>
+      <span>Open Grievances</span>
+      <h1>2</h1>
+    </div>
+  </div>
+</section>
+
+<!-- CHARTS -->
+<section class="charts">
+  <div class="chart-box">
+    <h4>Department-wise Employee Distribution</h4>
+    <canvas id="deptChart"></canvas>
+  </div>
+
+  <div class="chart-box">
+    <h4>Today's Attendance</h4>
+    <canvas id="attChart"></canvas>
+  </div>
+</section>
+
+<!-- LOWER SECTION -->
+<section class="lower">
+    
+  <div class="box">
+    <h4>Recent Job Postings</h4>
+
+    <div class="job">
+      <div>
+        <strong>Junior Engineer - Civil</strong>
+        <p>Engineering · 5 positions</p>
+      </div>
+      <span class="tag green">45 applicants</span>
+    </div>
+
+    <div class="job">
+      <div>
+        <strong>Sanitation Inspector</strong>
+        <p>Sanitation · 10 positions</p>
+      </div>
+      <span class="tag green">78 applicants</span>
+    </div>
+
+    <div class="job">
+      <div>
+        <strong>Accounts Assistant</strong>
+        <p>Finance · 3 positions</p>
+      </div>
+      <span class="tag green">92 applicants</span>
+    </div>
+  </div>
+
+  <div class="box">
+    <h4>Pending Actions</h4>
+
+    <div class="alert warn">
+      <strong>Transfer Requests</strong>
+      <span>1 pending</span>
+    </div>
+
+    <div class="alert danger">
+      <strong>Open Grievances</strong>
+      <span>2 open</span>
+    </div>
+
+    <div class="alert info">
+      <strong>Payroll Processing</strong>
+      <span>In Progress</span>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ DEPARTMENT OVERVIEW (ADDED) -->
+<section class="box" style="margin-top:20px">
+  <h4>Department Overview</h4>
+
+  <table class="dept-table">
+    <thead>
+      <tr>
+        <th>Department</th>
+        <th>Total Employees</th>
+        <th>Open Vacancies</th>
+        <th>Avg Performance</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Engineering</td><td>145</td><td>5 open</td><td>4.3 / 5</td><td>Active</td></tr>
+      <tr><td>Sanitation</td><td>320</td><td>10 open</td><td>4.1 / 5</td><td>Active</td></tr>
+      <tr><td>Finance</td><td>85</td><td>3 open</td><td>4.4 / 5</td><td>Active</td></tr>
+      <tr><td>Human Resources</td><td>42</td><td>No vacancies</td><td>4.6 / 5</td><td>Active</td></tr>
+      <tr><td>Public Works</td><td>210</td><td>8 open</td><td>4.2 / 5</td><td>Active</td></tr>
+      <tr><td>Health Services</td><td>195</td><td>15 open</td><td>4.5 / 5</td><td>Active</td></tr>
+      <tr><td>Education</td><td>125</td><td>6 open</td><td>4.3 / 5</td><td>Active</td></tr>
+      <tr><td>IT & E-Governance</td><td>35</td><td>4 open</td><td>4.7 / 5</td><td>Active</td></tr>
+      <tr><td>Revenue</td><td>92</td><td>7 open</td><td>4.2 / 5</td><td>Active</td></tr>
+    </tbody>
+  </table>
+</section>
+
+</main>
+
+<script src="admin.js"></script>
+</body>
+</html>
