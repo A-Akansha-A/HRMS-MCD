@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,13 +7,14 @@
 </head>
 <body>
 <header class="header">
-    <h2>Attendance</h2>
+    <h2>Unified HRMS - MCD</h2>
+    <p>Attendance Management</p>
 </header>
 
 <nav class="nav">
     <a href="dashboard.html">Dashboard</a>
     <a href="recruitment.html">Recruitment</a>
-    <a href="attendance.html">Attendance</a>
+    <a href="attendance.html" class="active">Attendance</a>
     <a href="transfers.html">Transfers</a>
     <a href="payroll.html">Payroll</a>
     <a href="performance.html">Performance</a>
@@ -21,21 +22,37 @@
 </nav>
 
 <div class="container">
-    <h3>Attendance Records</h3>
-    <table class="card">
-        <tr><th>Date</th><th>Status</th></tr>
-        <tbody id="attendanceTable"></tbody>
-    </table>
+    <div class="card" style="text-align: center; padding: 30px;">
+        <h4>Daily Punch-In</h4>
+        <p id="currentTime"></p>
+        <button id="punchBtn" class="btn-primary" onclick="markAttendance()">Punch In (Mark Present)</button>
+        <p id="punchStatus" style="margin-top:10px; color: green; font-weight: bold;"></p>
+    </div>
+
+    <h3>Recent Attendance History</h3>
+    <div class="card">
+        <div style="display: flex; justify-content: space-between; padding: 10px; border-bottom: 1px solid #eee;">
+            <span>Jan 10, 2026</span> <span style="color: green;">✔ Present (09:00 AM)</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding: 10px;">
+            <span>Jan 09, 2026</span> <span style="color: green;">✔ Present (08:55 AM)</span>
+        </div>
+    </div>
 </div>
 
-<script src="../js/employee.js"></script>
 <script>
-const attTable = document.getElementById("attendanceTable");
-employee.attendance.forEach(a=>{
-    const row = document.createElement("tr");
-    row.innerHTML = `<td>${a.date}</td><td>${a.status}</td>`;
-    attTable.appendChild(row);
-});
+    function markAttendance() {
+        const btn = document.getElementById('punchBtn');
+        const status = document.getElementById('punchStatus');
+        btn.disabled = true;
+        btn.style.backgroundColor = "#ccc";
+        status.innerText = "Success: Attendance marked at " + new Date().toLocaleTimeString();
+    }
+    setInterval(() => {
+        document.getElementById('currentTime').innerText = new Date().toLocaleString();
+    }, 1000);
 </script>
 </body>
 </html>
+
+

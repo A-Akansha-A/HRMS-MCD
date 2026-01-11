@@ -7,7 +7,8 @@
 </head>
 <body>
 <header class="header">
-    <h2>Performance Track</h2>
+    <h2>Unified HRMS - MCD</h2>
+    <p>Performance Analytics</p>
 </header>
 
 <nav class="nav">
@@ -16,26 +17,24 @@
     <a href="attendance.html">Attendance</a>
     <a href="transfers.html">Transfers</a>
     <a href="payroll.html">Payroll</a>
-    <a href="performance.html">Performance</a>
+    <a href="performance.html" class="active">Performance</a>
     <a href="grievance.html">Grievance</a>
 </nav>
 
 <div class="container">
-    <h3>Performance Metrics</h3>
-    <table class="card">
-        <tr><th>Month</th><th>Rating</th></tr>
-        <tbody id="performanceTable"></tbody>
-    </table>
+    <h3>Key Performance Indicators (KPI)</h3>
+    <div class="card">
+        <h4>Task Completion Rate</h4>
+        <div style="background:#eee; height:20px; border-radius:10px; overflow:hidden;">
+            <div style="background:#003366; width:85%; height:100%; color:white; font-size:12px; text-align:center;">85%</div>
+        </div>
+        
+        <h4 style="margin-top:20px;">Punctuality Score</h4>
+        <div style="background:#eee; height:20px; border-radius:10px; overflow:hidden;">
+            <div style="background:#28a745; width:92%; height:100%; color:white; font-size:12px; text-align:center;">92%</div>
+        </div>
+    </div>
 </div>
-
-<script src="../js/employee.js"></script>
-<script>
-const perfTable = document.getElementById("performanceTable");
-employee.performance.forEach(p=>{
-    const row = document.createElement("tr");
-    row.innerHTML = `<td>${p.month}</td><td>${p.rating}</td>`;
-    perfTable.appendChild(row);
-});
-</script>
 </body>
 </html>
+

@@ -1,40 +1,114 @@
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f7fa;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
 }
 
+/* Header */
 .header {
-    background-color: #0b4f6c;
+    background-color: #003366; /* Deep blue from your image */
     color: white;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
 }
 
-.container {
-    padding: 20px;
+.header h2 { margin: 0; }
+.header p { margin: 5px 0 0; opacity: 0.9; }
+
+/* Navigation - Fixed Spacing */
+.nav {
+    background-color: #ffffff;
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px; /* Space between links */
+    border-bottom: 2px solid #ddd;
+    overflow-x: auto; /* Scrollable on mobile */
 }
 
+.nav a {
+    text-decoration: none;
+    color: #555;
+    padding: 15px 5px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.nav a:hover {
+    color: #003366;
+    border-bottom: 3px solid #003366;
+}
+
+/* Main Content Area */
+.container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Profile Card */
 .card {
     background: white;
-    padding: 15px;
-    margin: 15px 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
 }
 
+.profile-details p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Quick Actions Grid */
 .card-container {
     display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.action {
-    width: 250px;
+.card.action {
+    flex: 1;
+    text-align: center;
+    padding: 30px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
 }
 
-a {
-    text-decoration: none;
-    color: #0b4f6c;
+.card.action:hover {
+    transform: translateY(-5px);
+    background-color: #003366;
+    color: white;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
     font-weight: bold;
+    color: white;
 }
+
+/* Status wise colors */
+.Open {
+    background-color: green;
+}
+
+.Closed {
+    background-color: red;
+}
+
+.In-Progress {
+    background-color: orange;
+}
+
+

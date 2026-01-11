@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payroll | HRMS-MCD</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        table { width:100%; border-collapse: collapse; }
+        th, td { padding:10px; text-align:center; }
+        th { background:#f4f4f4; }
+        .card { padding:15px; background:#fff; border-radius:8px; }
+        .summary { margin-top:20px; }
+        .btn-sm { padding:5px 10px; cursor:pointer; }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <h2>Unified HRMS - MCD</h2>
+    <p>Payroll & Salary Slips</p>
+</header>
+
+<nav class="nav">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="recruitment.html">Recruitment</a>
+    <a href="attendance.html">Attendance</a>
+    <a href="transfers.html">Transfers</a>
+    <a href="payroll.html" class="active">Payroll</a>
+    <a href="performance.html">Performance</a>
+    <a href="grievance.html">Grievance</a>
+</nav>
+
+<div class="container">
+    <h3>Salary Slip History</h3>
+
+    <div class="card">
+        <table>
+            <tr>
+                <th>Month</th>
+                <th>Basic Salary</th>
+                <th>Leaves</th>
+                <th>Deductions</th>
+                <th>Net Salary</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>December 2025</td>
+                <td>₹75,000</td>
+                <td id="leaves">5</td>
+                <td id="deduction">₹5,000</td>
+                <td><b id="netSalary">₹70,000</b></td>
+                <td><button class="btn-sm" onclick="downloadSlip()">Download PDF</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Monthly Summary -->
+    <div class="card summary">
+        <h4>Monthly Payroll Summary</h4>
+        <p><b>Total Earnings:</b> ₹75,000</p>
+        <p><b>Total Deductions:</b> ₹5,000</p>
+        <p><b>Net Payable Salary:</b> ₹70,000</p>
+        <p style="font-size:13px;color:gray;">
+            * Salary calculated based on leaves & attendance
+        </p>
+    </div>
+</div>
+
+<script>
+    const basicSalary = 75000;
+    const leavesTaken = 5;
+    const perLeaveDeduction = 1000;
+
+    const totalDeduction = leavesTaken * perLeaveDeduction;
+    const netSalary = basicSalary - totalDeduction;
+
+    document.getElementById("deduction").innerText = "₹" + totalDeduction;
+    document.getElementById("netSalary").innerText = "₹" + netSalary;
+
+    function downloadSlip() {
+        alert("Payslip downloaded successfully (PDF simulation)");
+    }
+</script>
+
+</body>
+</html>

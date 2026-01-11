@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Dashboard | HRMS-MCD</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -23,26 +24,31 @@
 </nav>
 
 <div class="container">
-    <h3>Welcome, <span id="empName">Employee</span></h3>
+    <h3>Welcome, <span id="empName">Rohan lohia</span></h3>
 
-    <div class="card">
+    <div class="card profile-card">
         <h4>Profile Summary</h4>
-        <p><b>Name:</b> <span id="profileName">-</span></p>
-        <p><b>Department:</b> <span id="profileDept">-</span></p>
-        <p><b>Designation:</b> <span id="profileDesig">-</span></p>
+        <div class="profile-details">
+            <p><b>Name:</b> <span id="profileName">Rohan lohia</span></p>
+            <p><b>Department:</b> <span id="profileDept">Engineering</span></p>
+            <p><b>Designation:</b> <span id="profileDesig">Senior Developer</span></p>
+        </div>
     </div>
 
     <h4>Quick Actions</h4>
     <div class="card-container">
         <div class="card action" id="viewProfile">
+            <div class="icon">👤</div>
             <h4>View Profile</h4>
         </div>
 
         <div class="card action" id="submitGrievance">
+            <div class="icon">📝</div>
             <h4>Submit Grievance</h4>
         </div>
 
         <div class="card action" id="grievanceStatus">
+            <div class="icon">🔍</div>
             <h4>Grievance Status</h4>
         </div>
     </div>
