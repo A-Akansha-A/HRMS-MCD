@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MCD HRMS | Transfers</title>
+
+<link rel="stylesheet" href="admin.css">
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <h2>MCD HRMS</h2>
+  <p class="subtitle">Municipal Corporation of Delhi</p>
+
+  <nav>
+    <a href="admin.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+    <a href="recruitment.html"><i class="fa-solid fa-users"></i> Recruitment</a>
+    <a href="attendance.html"><i class="fa-solid fa-calendar-check"></i> Attendance</a>
+    <a class="active"><i class="fa-solid fa-rotate"></i> Transfers</a>
+  </nav>
+
+  <div class="version">Version 1.0<br>© 2026 MCD</div>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+<header class="topbar">
+  <div>
+    <h3>Transfers</h3>
+    <small>Municipal Corporation of Delhi - HRMS Portal</small>
+  </div>
+</header>
+
+<!-- PENDING TRANSFER -->
+<section class="box" style="margin-bottom:20px;background:#fffbea">
+  <h4><i class="fa-solid fa-clock"></i> Pending Approvals (1)</h4>
+
+  <p><strong>Amit Verma</strong> (EMP003)</p>
+  <p>From: <b>Finance</b> → To: <b>Revenue</b></p>
+  <p>Reason: Seeking career growth and new challenges</p>
+
+  <div style="margin-top:10px">
+    <button class="btn green" onclick="approve()">Approve</button>
+    <button class="btn danger" onclick="reject()">Reject</button>
+  </div>
+</section>
+
+<!-- TRANSFER HISTORY -->
+<section class="box">
+  <h4>Transfer History</h4>
+
+  <table class="dept-table">
+    <thead>
+      <tr>
+        <th>Employee</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Amit Verma<br><small>EMP003</small></td>
+        <td>Finance</td>
+        <td>Revenue</td>
+        <td>28/12/2025</td>
+        <td><span class="tag warn">Pending</span></td>
+      </tr>
+
+      <tr>
+        <td>Rajesh Kumar<br><small>EMP001</small></td>
+        <td>Engineering</td>
+        <td>Public Works</td>
+        <td>15/11/2025</td>
+        <td><span class="tag green">Approved</span></td>
+      </tr>
+
+      <tr>
+        <td>Sneha Gupta<br><small>EMP004</small></td>
+        <td>Sanitation</td>
+        <td>Health Services</td>
+        <td>05/10/2025</td>
+        <td><span class="tag danger">Rejected</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+</main>
+
+<script src="transfer.js"></script>
+</body>
+</html>
