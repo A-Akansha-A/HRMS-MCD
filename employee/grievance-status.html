@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grievance Status</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<h2>Your Grievance</h2>
+
+<div id="grievanceBox" class="card"></div>
+
+<script>
+const data = localStorage.getItem("employeeGrievance");
+
+if (data) {
+    const grievance = JSON.parse(data);
+
+    document.getElementById("grievanceBox").innerHTML = `
+        <p><b>Title:</b> ${grievance.title}</p>
+        <p><b>Description:</b> ${grievance.description}</p>
+        <p><b>Status:</b> <span style="color:orange">${grievance.status}</span></p>
+    `;
+} else {
+    document.getElementById("grievanceBox").innerHTML =
+        "<p>No grievance submitted yet.</p>";
+}
+</script>
+
+<br>
+<a href="dashboard.html">← Back to Dashboard</a>
+
+</body>
+</html>

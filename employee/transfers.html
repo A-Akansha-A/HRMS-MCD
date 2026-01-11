@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transfers | HRMS-MCD</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <h2>Unified HRMS - MCD</h2>
+    <p>Transfer Management System</p>
+</header>
+
+<nav class="nav">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="recruitment.html">Recruitment</a>
+    <a href="attendance.html">Attendance</a>
+    <a href="transfers.html" class="active">Transfers</a>
+    <a href="payroll.html">Payroll</a>
+    <a href="performance.html">Performance</a>
+    <a href="grievance.html">Grievance</a>
+</nav>
+
+<div class="container">
+    <div class="grid-container" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 20px;">
+        
+        <div class="card">
+            <h3>New Transfer Request</h3>
+            <hr>
+            <form id="transferForm" style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
+                <label><b>Current Zone:</b> North Delhi</label>
+                
+                <label for="targetZone"><b>Preferred Zone:</b></label>
+                <select id="targetZone" style="padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+                    <option value="south">South Delhi</option>
+                    <option value="east">East Delhi</option>
+                    <option value="west">West Delhi</option>
+                    <option value="najafgarh">Najafgarh</option>
+                    <option value="hq">Civic Center (HQ)</option>
+                </select>
+
+                <label for="reason"><b>Reason for Request:</b></label>
+                <textarea id="reason" rows="4" placeholder="Mention medical, personal, or administrative reasons..." style="padding: 8px; border-radius: 4px; border: 1px solid #ccc;"></textarea>
+
+                <button type="button" class="btn-primary" onclick="submitTransfer()">Submit Request</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h3>Transfer History & Status</h3>
+            <hr>
+            <table style="width:100%; border-collapse: collapse; margin-top: 15px;">
+                <thead>
+                    <tr style="background-color: #003366; color: white;">
+                        <th style="padding: 10px; text-align: left;">Request ID</th>
+                        <th style="padding: 10px; text-align: left;">Target Zone</th>
+                        <th style="padding: 10px; text-align: left;">Date</th>
+                        <th style="padding: 10px; text-align: left;">Status</th>
+                    </tr>
+                </thead>
+                <tbody id="transferHistory">
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee;">TR-9902</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee;">West Delhi</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee;">12 Nov 2024</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee;"><span style="color: red; font-weight: bold;">Rejected</span></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee;">TR-8441</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee;">North Delhi</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee;">05 May 2023</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee;"><span style="color: green; font-weight: bold;">Approved</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    function submitTransfer() {
+        const zone = document.getElementById('targetZone').value;
+        const reason = document.getElementById('reason').value;
+
+        if(!reason) {
+            alert("Please provide a reason for the transfer request.");
+            return;
+        }
+
+        // Simulating a successful submission for the hackathon prototype
+        alert(`Request for transfer to ${zone.toUpperCase()} Zone has been submitted to the HR Department.`);
+        document.getElementById('transferForm').reset();
+        
+        // Visual feedback
+        console.log("Transfer Request JSON Data: ", {
+            employeeId: "MCD-2024-089",
+            requestedZone: zone,
+            reason: reason,
+            timestamp: new Date().toISOString()
+        });
+    }
+</script>
+
+</body>
+</html>
+
+

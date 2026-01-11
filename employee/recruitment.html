@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recruitment | HRMS-MCD</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            color: white;
+            font-size: 12px;
+        }
+        .Open { background-color: green; }
+        .In\ Progress { background-color: orange; }
+        .Closed { background-color: red; }
+
+        .btn-sm {
+            padding: 6px 10px;
+            background-color: #003366;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .btn-sm:hover {
+            background-color: #0055aa;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <h2>Unified HRMS - MCD</h2>
+    <p>Recruitment Portal</p>
+</header>
+
+<nav class="nav">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="recruitment.html" class="active">Recruitment</a>
+    <a href="attendance.html">Attendance</a>
+    <a href="transfers.html">Transfers</a>
+    <a href="payroll.html">Payroll</a>
+    <a href="performance.html">Performance</a>
+    <a href="grievance.html">Grievance</a>
+</nav>
+
+<div class="container">
+    <h3>Open Recruitment Updates</h3>
+
+    <div class="card">
+        <table style="width:100%; border-collapse: collapse; margin-top: 10px;">
+            <thead>
+                <tr style="background-color: #003366; color: white;">
+                    <th style="padding: 12px;">Post ID</th>
+                    <th style="padding: 12px;">Job Title</th>
+                    <th style="padding: 12px;">Department</th>
+                    <th style="padding: 12px;">Status</th>
+                    <th style="padding: 12px;">Action</th>
+                </tr>
+            </thead>
+            <tbody id="recruitmentTable"></tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    // Mock Recruitment Data (Admin generated)
+    const vacancies = [
+        {
+            id: "MCD/2026/01",
+            title: "Junior Engineer (Civil)",
+            dept: "Engineering",
+            status: "Open",
+            applicants: 124
+        },
+        {
+            id: "MCD/2026/05",
+            title: "Assistant Commissioner",
+            dept: "Administration",
+            status: "In Progress",
+            applicants: 89
+        },
+        {
+            id: "MCD/2026/09",
+            title: "Sanitation Inspector",
+            dept: "Public Health",
+            status: "Closed",
+            applicants: 210
+        }
+    ];
+
+    const tableBody = document.getElementById("recruitmentTable");
+
+    vacancies.forEach(v => {
+        const row = `
+        <tr>
+            <td style="padding:10px; border-bottom:1px solid #ddd;">${v.id}</td>
+            <td style="padding:10px; border-bottom:1px solid #ddd;"><b>${v.title}</b></td>
+            <td style="padding:10px; border-bottom:1px solid #ddd;">${v.dept}</td>
+            <td style="padding:10px; border-bottom:1px solid #ddd;">
+                <span class="badge ${v.status.replace(" ","-")}">${v.status}</span>
+            </td>
+            <td style="padding:10px; border-bottom:1px solid #ddd;">
+                <button class="btn-sm" onclick="viewDetails('${v.title}','${v.dept}','${v.status}',${v.applicants})">
+                    View Details
+                </button>
+            </td>
+        </tr>`;
+        tableBody.innerHTML += row;
+    });
+
+    function viewDetails(title, dept, status, applicants) {
+        alert(
+            "Job Title: " + title +
+            "\nDepartment: " + dept +
+            "\nStatus: " + status +
+            "\nApplicants: " + applicants +
+            "\n\n(Employee view only)\nBackend integration pending."
+        );
+    }
+</script>
+
+</body>
+</html>
+
+
