@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MCD HRMS | Grievances</title>
+
+<link rel="stylesheet" href="admin.css">
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <h2>MCD HRMS</h2>
+  <p class="subtitle">Municipal Corporation of Delhi</p>
+
+  <nav>
+    <a href="admin.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+    <a href="recruitment.html"><i class="fa-solid fa-users"></i> Recruitment</a>
+    <a href="attendance.html"><i class="fa-solid fa-calendar-check"></i> Attendance</a>
+    <a href="transfer.html"><i class="fa-solid fa-repeat"></i> Transfers</a>
+    <a href="payroll.html"><i class="fa-solid fa-money-bill"></i> Payroll</a>
+    <a href="performance.html"><i class="fa-solid fa-star"></i> Performance</a>
+    <a class="active"><i class="fa-solid fa-comments"></i> Grievances</a>
+  </nav>
+
+  <div class="version">Version 1.0<br>© 2026 MCD</div>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+<header class="topbar">
+  <div>
+    <h3>Grievance Redressal</h3>
+    <small>Submit and track employee grievances</small>
+  </div>
+</header>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="card">
+    <i class="fa-solid fa-file-lines"></i>
+    <div>
+      <span>Total Grievances</span>
+      <h1>3</h1>
+    </div>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-circle-exclamation"></i>
+    <div>
+      <span>Open</span>
+      <h1>1</h1>
+    </div>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-spinner"></i>
+    <div>
+      <span>In Progress</span>
+      <h1>1</h1>
+    </div>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-check"></i>
+    <div>
+      <span>Resolved</span>
+      <h1>1</h1>
+    </div>
+  </div>
+</section>
+
+<!-- GRIEVANCE LIST -->
+<section class="box" style="margin-top:20px">
+
+  <h4>Grievance List</h4>
+
+  <!-- Grievance 1 -->
+  <div class="job-card">
+    <div>
+      <h4>AC not working in office</h4>
+      <p>Submitted by Amit Verma (EMP003)</p>
+      <small class="tag warn">In Progress</small>
+    </div>
+    <button onclick="markResolved()">Mark Resolved</button>
+  </div>
+
+  <!-- Grievance 2 -->
+  <div class="job-card">
+    <div>
+      <h4>Delay in salary credit</h4>
+      <p>Submitted by Sneha Gupta (EMP004)</p>
+      <small class="tag danger">Open</small>
+    </div>
+    <button onclick="startProgress()">Start Progress</button>
+  </div>
+
+  <!-- Grievance 3 -->
+  <div class="job-card">
+    <div>
+      <h4>Leave balance incorrect</h4>
+      <p>Submitted by Rajesh Kumar (EMP001)</p>
+      <small class="tag green">Resolved</small>
+    </div>
+    <button disabled>Resolved</button>
+  </div>
+
+</section>
+
+<!-- RESOLVE FORM -->
+<section class="box" style="margin-top:20px">
+  <h4>Resolve Grievance</h4>
+
+  <select>
+    <option>Select Grievance</option>
+    <option>AC not working</option>
+    <option>Salary delay</option>
+  </select>
+
+  <textarea placeholder="Resolution details"></textarea>
+  <button class="btn" onclick="submitResolution()">Submit Resolution</button>
+</section>
+
+</main>
+
+<script src="grievances.js"></script>
+</body>
+</html>
