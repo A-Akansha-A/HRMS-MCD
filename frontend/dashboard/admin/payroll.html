@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MCD HRMS | Payroll</title>
+
+<link rel="stylesheet" href="admin.css">
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <h2>MCD HRMS</h2>
+  <p class="subtitle">Municipal Corporation of Delhi</p>
+
+  <nav>
+    <a href="admin.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+    <a href="recruitment.html"><i class="fa-solid fa-users"></i> Recruitment</a>
+    <a href="attendance.html"><i class="fa-solid fa-calendar-check"></i> Attendance</a>
+    <a href="transfer.html"><i class="fa-solid fa-rotate"></i> Transfers</a>
+    <a class="active"><i class="fa-solid fa-money-bill-wave"></i> Payroll</a>
+  </nav>
+
+  <div class="version">Version 1.0<br>© 2026 MCD</div>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+<header class="topbar">
+  <div>
+    <h3>Payroll</h3>
+    <small>Municipal Corporation of Delhi - HRMS Portal</small>
+  </div>
+</header>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="card">
+    <i class="fa-solid fa-wallet"></i>
+    <div>
+      <span>Total Payroll</span>
+      <h1>₹2,35,000</h1>
+      <small>December 2025</small>
+    </div>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-users"></i>
+    <div>
+      <span>Employees Paid</span>
+      <h1>3</h1>
+      <small>Active employees</small>
+    </div>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-chart-line"></i>
+    <div>
+      <span>Average Salary</span>
+      <h1>₹78,333</h1>
+      <small>Per employee</small>
+    </div>
+  </div>
+</section>
+
+<!-- PAYROLL TABLE -->
+<section class="box" style="margin-top:20px">
+  <h4>Employee Payslips</h4>
+
+  <table class="dept-table">
+    <thead>
+      <tr>
+        <th>Employee</th>
+        <th>Period</th>
+        <th>Basic Salary</th>
+        <th>Allowances</th>
+        <th>Deductions</th>
+        <th>Net Salary</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Rajesh Kumar<br><small>EMP001</small></td>
+        <td>December 2025</td>
+        <td>₹85,000</td>
+        <td class="green">+₹15,000</td>
+        <td class="danger">-₹8,500</td>
+        <td><b>₹91,500</b></td>
+        <td><button onclick="downloadSlip()">Download</button></td>
+      </tr>
+
+      <tr>
+        <td>Priya Sharma<br><small>EMP002</small></td>
+        <td>December 2025</td>
+        <td>₹75,000</td>
+        <td class="green">+₹12,000</td>
+        <td class="danger">-₹7,500</td>
+        <td><b>₹79,500</b></td>
+        <td><button onclick="downloadSlip()">Download</button></td>
+      </tr>
+
+      <tr>
+        <td>Amit Verma<br><small>EMP003</small></td>
+        <td>December 2025</td>
+        <td>₹60,000</td>
+        <td class="green">+₹10,000</td>
+        <td class="danger">-₹6,000</td>
+        <td><b>₹64,000</b></td>
+        <td><button onclick="downloadSlip()">Download</button></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+</main>
+
+<script src="payroll.js"></script>
+</body>
+</html>
