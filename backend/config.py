@@ -1,10 +1,8 @@
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 class Config:
-    DB_HOST = os.getenv("DB_HOST", "localhost")
-    DB_USER = os.getenv("DB_USER", "root")
-    DB_PASSWORD = os.getenv("DB_PASSWORD", "")
-    DB_NAME = os.getenv("DB_NAME", "hrms_mcd")
+    DB_HOST = os.getenv("MYSQLHOST")
+    DB_USER = os.getenv("MYSQLUSER")
+    DB_PASSWORD = os.getenv("MYSQLPASSWORD")
+    DB_NAME = os.getenv("MYSQLDATABASE")
+    DB_PORT = os.getenv("MYSQLPORT", 3306)
