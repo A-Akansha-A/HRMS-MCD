@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+/* Header */
+.top-header {
+    background-color: #1f3a5f;
+    color: white;
+    padding: 15px 30px;
+}
+
+.govt-title {
+    font-weight: 600;
+    display: block;
+}
+
+.dept-title {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 70px);
+}
+
+/* Login Card */
+.login-card {
+    background: #ffffff;
+    width: 420px;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Card Header */
+.card-header {
+    background-color: #1f3b5b;
+    color: white;
+    padding: 24px 20px;
+    text-align: center;
+}
+
+.card-header .icon {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.card-header h2 {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.card-header p {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+/* Form */
+form {
+    padding: 25px;
+}
+
+form label {
+    font-size: 13px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    display: block;
+    font-weight: 500;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Info Box */
+.info-box {
+    background: #f1f5f9;
+    padding: 10px;
+    font-size: 12px;
+    margin: 16px 0;
+    border-left: 4px solid #1f3a5f;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1f3a5f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #16304d;
+}
+
+/* Forgot link */
+.forgot {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #1f3a5f;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+    color: #555;
+}
