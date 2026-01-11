@@ -51,4 +51,46 @@ if (attCtx) {
       }
     }
   });
+  // OPEN CREATE JOB
+function openJob() {
+  document.getElementById("jobModal").style.display = "flex";
+}
+
+// CLOSE
+function closeJob() {
+  document.getElementById("jobModal").style.display = "none";
+}
+
+// ADD JOB (FAKE FRONTEND)
+function addJob() {
+  const title = jobTitle.value;
+  const dept = jobDept.value;
+  const vac = jobVacancy.value;
+
+  if (!title || !dept || !vac) {
+    alert("Fill all fields");
+    return;
+  }
+
+  const jobBox = document.querySelector(".box");
+  const div = document.createElement("div");
+  div.className = "job";
+  div.innerHTML = `
+    <div>
+      <strong>${title}</strong>
+      <p>${dept} · ${vac} positions</p>
+    </div>
+    <span class="tag green">New</span>
+  `;
+
+  jobBox.appendChild(div);
+  closeJob();
+}
+function viewDetails(dept, emp) {
+  alert(
+    `Department: ${dept}\nEmployees: ${emp}\nStatus: Active`
+  );
+}
+
+
 }

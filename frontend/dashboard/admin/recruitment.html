@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MCD HRMS | Recruitment</title>
+
+<link rel="stylesheet" href="admin.css">
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+
+<body>
+
+<!-- SIDEBAR (same) -->
+<aside class="sidebar">
+  <h2>MCD HRMS</h2>
+  <p class="subtitle">Municipal Corporation of Delhi</p>
+
+  <nav>
+    <a href="admin.html"><i class="fa fa-chart-line"></i> Dashboard</a>
+    <a class="active"><i class="fa fa-users"></i> Recruitment</a>
+  </nav>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+<header class="topbar">
+  <h3>Recruitment</h3>
+</header>
+
+<!-- TABS -->
+<div class="tabs">
+  <button class="tab active" onclick="openTab('jobs', this)">Job Postings</button>
+<button class="tab" onclick="openTab('applicants', this)">Applicants</button>
+<button class="tab" onclick="openTab('create', this)">Create Job</button>
+
+</div>
+
+<!-- JOB POSTINGS -->
+<section id="jobs" class="tab-content active">
+
+  <div class="job-card">
+    <div>
+      <h4>Junior Engineer (Civil)</h4>
+      <p>Department: Engineering</p>
+    </div>
+    <button onclick="viewDetails()">View Details</button>
+  </div>
+
+  <div class="job-card">
+    <div>
+      <h4>Sanitation Inspector</h4>
+      <p>Department: Sanitation</p>
+    </div>
+    <button onclick="viewDetails()">View Details</button>
+  </div>
+
+</section>
+
+<!-- APPLICANTS -->
+<section id="applicants" class="tab-content">
+  <p>No applicants data available (UI demo)</p>
+</section>
+
+<!-- CREATE JOB -->
+<section id="create" class="tab-content">
+  <form class="create-form" onsubmit="return false">
+    
+    <input id="jobTitle" type="text" placeholder="Job Title">
+    
+    <input id="jobDept" type="text" placeholder="Department">
+    
+    <button type="button" onclick="createJob()">
+      Create Job
+    </button>
+
+  </form>
+</section>
+
+
+</main>
+
+<!-- MODAL -->
+<div class="modal" id="detailsModal">
+  <div class="modal-box">
+    <h3>Job Details</h3>
+    <p id="detailsText"></p>
+
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<div class="job-card">
+  <div>
+    <h4>Junior Engineer (Civil)</h4>
+    <p>Department: Engineering</p>
+  </div>
+
+  <div class="actions">
+    <button onclick="viewDetails()">View</button>
+    <button class="danger" onclick="deleteJob(this)">Delete</button>
+  </div>
+</div>
+
+
+<script src="recruitment.js"></script>
+</body>
+</html>
