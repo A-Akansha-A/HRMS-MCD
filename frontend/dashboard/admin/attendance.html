@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MCD HRMS | Attendance</title>
+
+<link rel="stylesheet" href="admin.css">
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <h2>MCD HRMS</h2>
+  <p class="subtitle">Municipal Corporation of Delhi</p>
+
+  <nav>
+    <a href="admin.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+    <a href="recruitment.html"><i class="fa-solid fa-users"></i> Recruitment</a>
+    <a href="attendance.html" class ="active">
+  <i class="fa-solid fa-calendar-check"></i> Attendance
+</a>
+<a href="transfer.html"><i class="fa-solid fa-rotate"></i> Transfers</a>
+    <a href="payroll.html"><i class="fa-solid fa-money-bill-wave"></i> Payroll</a>
+    <a href="performance.html"><i class="fa-solid fa-star"></i> Performance</a>
+    <a href="grievances.html"><i class="fa-solid fa-comments"></i> Grievances</a>
+
+  </nav>
+
+  <div class="version">Version 1.0<br>© 2026 MCD</div>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+<header class="topbar">
+  <div>
+    <h3>Attendance</h3>
+    <small>Municipal Corporation of Delhi - HRMS Portal</small>
+  </div>
+</header>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="card">
+    <i class="fa-solid fa-check"></i>
+    <div>
+      <span>Present Days</span>
+      <h1>3</h1>
+      <small>60% attendance</small>
+    </div>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-xmark"></i>
+    <div>
+      <span>Absent Days</span>
+      <h1>1</h1>
+      <small>20% of total</small>
+    </div>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-clock"></i>
+    <div>
+      <span>Leave Days</span>
+      <h1>1</h1>
+      <small>Approved leaves</small>
+    </div>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-calendar"></i>
+    <div>
+      <span>Total Days</span>
+      <h1>5</h1>
+      <small>Current month</small>
+    </div>
+  </div>
+</section>
+
+<!-- TABLE -->
+<section class="box" style="margin-top:20px">
+  <h4>Attendance History</h4>
+
+  <table class="dept-table">
+    <thead>
+      <tr>
+        <th>Employee</th>
+        <th>Date</th>
+        <th>Check In</th>
+        <th>Check Out</th>
+        <th>Hours</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Rajesh Kumar<br><small>EMP001</small></td>
+        <td>04/01/2026</td>
+        <td>09:15</td>
+        <td>18:30</td>
+        <td>9.3 hrs</td>
+        <td><span class="tag green">Present</span></td>
+      </tr>
+
+      <tr>
+        <td>Priya Sharma<br><small>EMP002</small></td>
+        <td>04/01/2026</td>
+        <td>09:00</td>
+        <td>18:00</td>
+        <td>9.0 hrs</td>
+        <td><span class="tag green">Present</span></td>
+      </tr>
+
+      <tr>
+        <td>Amit Verma<br><small>EMP003</small></td>
+        <td>04/01/2026</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td><span class="tag danger">Absent</span></td>
+      </tr>
+
+      <tr>
+        <td>Sneha Gupta<br><small>EMP004</small></td>
+        <td>04/01/2026</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td><span class="tag warn">Leave</span></td>
+      </tr>
+
+      <tr>
+        <td>Vikram Singh<br><small>EMP005</small></td>
+        <td>04/01/2026</td>
+        <td>09:30</td>
+        <td>18:15</td>
+        <td>8.8 hrs</td>
+        <td><span class="tag green">Present</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+</main>
+
+<script src="attendance.js"></script>
+</body>
+</html>

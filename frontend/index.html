@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HRMS Login | MCD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="top-header">
+    <span class="govt-title">Government of NCT of Delhi</span>
+    <span class="dept-title">Municipal Corporation of Delhi</span>
+</header>
+
+<main class="container">
+    <div class="login-card">
+
+        <div class="card-header">
+            <div class="icon">🏢</div>
+            <h2>Human Resource Management System</h2>
+            <p>Municipal Corporation of Delhi</p>
+        </div>
+
+        <form id="loginForm">
+            <label for="employeeId">Employee ID / Username</label>
+            <input type="text" id="employeeId" placeholder="Enter your employee ID" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <label for="role">Login As</label>
+            <select id="role">
+                <option>Employee</option>
+                <option>Admin</option>
+                <option>HR</option>
+            </select>
+
+            <div class="info-box">
+                For security reasons, please ensure you are accessing this portal from a secure network.
+            </div>
+
+            <button type="submit">Login</button>
+
+            <a href="#" class="forgot">Forgot Password?</a>
+        </form>
+
+    </div>
+</main>
+
+<footer>
+    © 2026 Municipal Corporation of Delhi. All Rights Reserved.
+</footer>
+
+<script src="js/login.js"></script>
+</body>
+</html>
