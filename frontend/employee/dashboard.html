@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard | HRMS-MCD</title>
+    <link rel="stylesheet" href="../css/employee.css">
+</head>
+<body>
+
+<header class="header">
+    <h2>Unified HRMS - MCD</h2>
+    <p>Employee Dashboard</p>
+</header>
+
+<nav class="nav">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="recruitment.html">Recruitment</a>
+    <a href="attendance.html">Attendance</a>
+    <a href="transfers.html">Transfers</a>
+    <a href="payroll.html">Payroll</a>
+    <a href="performance.html">Performance</a>
+    <a href="grievance.html">Grievance</a>
+</nav>
+
+<div class="container">
+    <h3>Welcome, <span id="empName">Rohan lohia</span></h3>
+
+    <div class="card profile-card">
+        <h4>Profile Summary</h4>
+        <div class="profile-details">
+            <p><b>Name:</b> <span id="profileName">Rohan lohia</span></p>
+            <p><b>Department:</b> <span id="profileDept">Engineering</span></p>
+            <p><b>Designation:</b> <span id="profileDesig">Senior Developer</span></p>
+        </div>
+    </div>
+
+    <h4>Quick Actions</h4>
+    <div class="card-container">
+        <div class="card action" id="viewProfile">
+            <div class="icon">👤</div>
+            <h4>View Profile</h4>
+        </div>
+
+        <div class="card action" id="submitGrievance">
+            <div class="icon">📝</div>
+            <h4>Submit Grievance</h4>
+        </div>
+
+        <div class="card action" id="grievanceStatus">
+            <div class="icon">🔍</div>
+            <h4>Grievance Status</h4>
+        </div>
+    </div>
+</div>
+
+<script src="../js/employee.js"></script>
+</body>
+</html>
+
