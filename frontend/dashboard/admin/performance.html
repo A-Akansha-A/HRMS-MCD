@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MCD HRMS | Performance</title>
+
+<link rel="stylesheet" href="admin.css">
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <h2>MCD HRMS</h2>
+  <p class="subtitle">Municipal Corporation of Delhi</p>
+
+  <nav>
+    <a href="admin.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+    <a href="recruitment.html"><i class="fa-solid fa-users"></i> Recruitment</a>
+    <a href="attendance.html"><i class="fa-solid fa-calendar-check"></i> Attendance</a>
+    <a href="transfer.html"><i class="fa-solid fa-repeat"></i> Transfers</a>
+    <a href="payroll.html"><i class="fa-solid fa-money-bill"></i> Payroll</a>
+    <a class="active"><i class="fa-solid fa-star"></i> Performance</a>
+    <a href="grievances.html"><i class="fa-solid fa-comments"></i> Grievances</a>
+  </nav>
+
+  <div class="version">Version 1.0<br>© 2026 MCD</div>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+<header class="topbar">
+  <div>
+    <h3>Performance Management</h3>
+    <small>Track and evaluate employee performance</small>
+  </div>
+</header>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="card">
+    <i class="fa-solid fa-star"></i>
+    <div>
+      <span>Avg Performance</span>
+      <h1>4.4 / 5</h1>
+    </div>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-trophy"></i>
+    <div>
+      <span>Top Performers</span>
+      <h1>3</h1>
+    </div>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-check"></i>
+    <div>
+      <span>Reviews Done</span>
+      <h1>5</h1>
+    </div>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-clock"></i>
+    <div>
+      <span>Pending Reviews</span>
+      <h1>3</h1>
+    </div>
+  </div>
+</section>
+
+<!-- CHART -->
+<section class="charts">
+  <div class="chart-box">
+    <h4>Performance by Employee</h4>
+    <canvas id="perfChart"></canvas>
+  </div>
+</section>
+
+<!-- TABLE -->
+<section class="box" style="margin-top:20px">
+  <h4>Employee Performance Reviews</h4>
+
+  <table class="dept-table">
+    <tr>
+      <th>Employee</th>
+      <th>Department</th>
+      <th>Rating</th>
+      <th>Status</th>
+      <th>Comments</th>
+    </tr>
+
+    <tr>
+      <td>Rajesh Kumar<br><small>EMP001</small></td>
+      <td>Engineering</td>
+      <td>4.5 ⭐</td>
+      <td><span class="tag green">Excellent</span></td>
+      <td>Timely project delivery</td>
+    </tr>
+
+    <tr>
+      <td>Priya Sharma<br><small>EMP002</small></td>
+      <td>HR</td>
+      <td>4.8 ⭐</td>
+      <td><span class="tag green">Excellent</span></td>
+      <td>Outstanding leadership</td>
+    </tr>
+
+    <tr>
+      <td>Amit Verma<br><small>EMP003</small></td>
+      <td>Finance</td>
+      <td>4.2 ⭐</td>
+      <td><span class="tag warn">Good</span></td>
+      <td>Needs faster reporting</td>
+    </tr>
+
+    <tr>
+      <td>Sneha Gupta<br><small>EMP004</small></td>
+      <td>Sanitation</td>
+      <td>4.0 ⭐</td>
+      <td><span class="tag warn">Good</span></td>
+      <td>Consistent performance</td>
+    </tr>
+
+    <tr>
+      <td>Vikram Singh<br><small>EMP005</small></td>
+      <td>IT</td>
+      <td>4.7 ⭐</td>
+      <td><span class="tag green">Excellent</span></td>
+      <td>Innovative solutions</td>
+    </tr>
+  </table>
+</section>
+
+</main>
+
+<script src="performance.js"></script>
+</body>
+</html>
